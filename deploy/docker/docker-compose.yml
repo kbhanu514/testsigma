@@ -1,8 +1,8 @@
-version: "3.9"
+version: "3.3"
 services:
   mysql:
     image: mysql:5.7 # Replace with mysql:8.0.32 for m1
-    platform: linux/x86_64 # Replace with linux/arm64/v8 for m1
+    #platform: linux/x86_64 # Replace with linux/arm64/v8 for m1
     container_name: testsigma_mysql
     restart: always
     volumes:
@@ -27,6 +27,6 @@ services:
       - "443:443"
     volumes:
       - ./ts_data:/opt/app/ts_data
-    depends_on:
-      mysql:
-        condition: service_healthy
+    #depends_on:
+     # mysql:
+      #  condition: service_healthy
