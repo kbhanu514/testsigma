@@ -6,8 +6,8 @@ COPY deploy/docker/nginx.repo /etc/yum.repos.d/nginx.repo
 
 RUN yum -y update; yum clean all
 RUN yum install -y nginx-1.20.1; yum clean all
-RUN yum -y install openssl-devel openssl wget zip unzip dnf which; yum clean all
-RUN set -x && dnf install --nodocs java-11-openjdk -y && dnf autoremove -y && dnf clean all -y && rm -rf /var/cache/dnf
+#RUN yum -y install openssl-devel openssl wget zip unzip dnf which; yum clean all
+#RUN set -x && dnf install --nodocs java-11-openjdk -y && dnf autoremove -y && dnf clean all -y && rm -rf /var/cache/dnf
 
 RUN mkdir /etc/nginx/logs
 RUN mkdir /opt/app/lib
